@@ -14,7 +14,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "types": [
-      "@okikio/animate",
+      "@okikio/animate/@types/api",
       "nixix/router",
       "nixix/dom",
       "nixix/primitives",

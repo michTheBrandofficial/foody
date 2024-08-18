@@ -1,3 +1,4 @@
+import { animate } from '@okikio/animate';
 import Nixix from "nixix";
 import { callRef } from "nixix/primitives";
 import { VStack } from "nixix/view-components";
@@ -28,6 +29,12 @@ const ScrollArea: Nixix.FC<Props> = ({ className, children, horizontal }): someV
   let startY: number;
   let scrollLeft: number;
   let scrollTop: number;
+  let scrollContainerWidth: number;
+  let scrollWidth: number;
+
+  // for spring when reaching ends;
+  let walkX: number
+
   return (
     <VStack bind:ref={scrollRef} style={style} className={`w-full h-full overflow-scroll no-scroll ` + className} on:mousedown={(ev) => {
       isDown = true;
@@ -39,14 +46,42 @@ const ScrollArea: Nixix.FC<Props> = ({ className, children, horizontal }): someV
       isDown = false
     }} on:mouseup={() => {
       isDown = false;
+      if (horizontal) {
+        if (scrollRef.current!.scrollLeft === 0)
+          if (walkX >= 0)
+            animate({
+              target: scrollRef.current!,
+              translateX: ['70px', '0px'],
+              duration: 1000,
+              fillMode: 'both'
+            })
+        if (scrollWidth === scrollContainerWidth + scrollLeft)
+          if (walkX <= 0)
+            animate({
+              target: scrollRef.current!,
+              translateX: ['-70px', '0px'],
+              duration: 1000,
+              fillMode: 'both'
+            })
+      }
+
     }} on:mousemove={(ev) => {
       if (!isDown) return;
       ev.preventDefault();
       if (horizontal) {
         const x = ev.pageX - scrollRef.current!.offsetLeft;
-        const walkX = x - startX;
+        scrollContainerWidth = scrollRef.current!.getBoundingClientRect().width;
+        scrollWidth = scrollRef.current!.scrollWidth;
+        walkX = x - startX;
+        // elastic scroll horizontal
+        // left end
+        if (scrollRef.current!.scrollLeft === 0)
+          if (walkX >= 0) return;
+        // right end
+        if (scrollWidth === scrollContainerWidth + scrollLeft)
+          if (walkX <= 0) return;
         scrollRef.current!.scroll({
-          left: scrollLeft - walkX,
+          left: (scrollLeft - walkX),
           behavior: 'smooth'
         })
       } else {
