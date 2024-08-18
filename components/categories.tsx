@@ -14,7 +14,7 @@ const Categories: Nixix.FC<Props> = (): someView => {
   return (
     <ScrollArea horizontal className="w-full gap-4 pr-4" >
       {/* For component here */}
-      <For each={categories.data} >
+      <For each={[...categories.data, ...categories.data, ...categories.data]} >
         {({ category, thumbnail }, i) => {
           const bgMemo = memo(() => activeCategory.value === i ? 'bg-amber-400' : 'bg-neutral-300', [activeCategory])
           return (
