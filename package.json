@@ -1,0 +1,31 @@
+{
+  "name": "general-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@okikio/animate": "^2.3.1",
+    "elastic-scroll-polyfill": "^2.1.0",
+    "nixix": "latest"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vite-jsconfig-paths": "latest"
+  }
+}

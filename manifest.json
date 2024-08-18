@@ -1,0 +1,16 @@
+{
+  "name": "FoodApp",
+  "short_name": "FoodApp",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "start_url": "/",
+  "theme_color": "none",
+  "icons": [
+    {
+      "purpose": "maskable any",
+      "sizes": "192x192",
+      "src": "/assets/images/icon.png",
+      "type": "image/png"
+    }
+  ]
+}

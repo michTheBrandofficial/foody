@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "name": "Apple Frangipan Tart",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg",
+      "category": "Dessert"
+    },
+    {
+      "name": "Apple & Blackberry Crumble",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg",
+      "category": "Dessert"
+    },
+    {
+      "name": "Apam balik",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
+      "category": "Dessert"
+    },
+    {
+      "name": "Ayam Percik",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/020z181619788503.jpg",
+      "category": "Chicken"
+    },
+    {
+      "name": "Bakewell tart",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg",
+      "category": "Dessert"
+    },
+    {
+      "name": "Bread and Butter Pudding",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg",
+      "category": "Dessert"
+    },
+    {
+      "name": "Beef Wellington",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/vvpprx1487325699.jpg",
+      "category": "Beef"
+    },
+    {
+      "name": "Baingan Bharta",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/urtpqw1487341253.jpg",
+      "category": "Vegetarian"
+    },
+    {
+      "name": "Beef Brisket Pot Roast",
+      "thumbnail": "https://www.themealdb.com/images/media/meals/ursuup1487348423.jpg",
+      "category": "Beef"
+    }
+  ]
+}
