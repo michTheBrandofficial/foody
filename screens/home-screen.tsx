@@ -2,7 +2,6 @@ import Avatar from '@/assets/images/user avatar.svg';
 import Categories from '@/components/categories';
 import Recipes from '@/components/recipes';
 import AppScreen from "@/components/screen";
-import ScrollArea from "@/components/scroll-area";
 import Icon from "@/utils/heroicons";
 import { bell, search } from "@/utils/heroicons/outline";
 import { Button, Heading, HStack, Paragragh, TextField, VStack } from "nixix/view-components";
@@ -10,7 +9,7 @@ import { Button, Heading, HStack, Paragragh, TextField, VStack } from "nixix/vie
 const Screen = (): JSX.Element => {
   return (
     <VStack className='w-full h-full bg-white relative flex flex-col justify-center items-center gap-y-10 ' >
-      <ScrollArea className="safe-area-top" >
+      <VStack className="w-full h-full safe-area-top " >
         <HStack className="w-full h-fit px-4 mb-4 flex items-center justify-between">
           <img src={Avatar} height={48} width={48} />
           <Icon path={bell} size={28} stroke-width={1.5} className="stroke-black fill-none" />
@@ -39,7 +38,7 @@ const Screen = (): JSX.Element => {
         <VStack className='mx-4 h-fit pb-6 space-y-4'>
           <Recipes />
         </VStack>
-      </ScrollArea>
+      </VStack>
     </VStack>
   )
 }
